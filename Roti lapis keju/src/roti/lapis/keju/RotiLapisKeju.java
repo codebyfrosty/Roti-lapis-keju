@@ -9,37 +9,37 @@ import java.util.Scanner;
 
 
 public class RotiLapisKeju {
-    
+    static void intro(){System.out.println("Mari membuat roti lapis double\nRoti lapis double membutuhkan 2 keju dan 3 roti.");}
     
 
     public static void main(String[] args) {        
+        System.out.println("Program dimulai..\n");
         Scanner input = new Scanner (System.in);
 
         boolean A=true;
         String ans;
-              
+        //perulangan      
         while ( A ){
+        Method summon = new Method();
         int kejumin=2;
         int banyakroti;
         int rotimin=3;
         int banyakkeju;
        Scanner pilih =new Scanner(System.in);
-        System.out.println ("Program dimulai..\n\nMari membuat roti lapis double");
-        System.out.println ("Roti lapis double membutuhkan 2 keju dan 3 roti.");
         
-        
-        System.out.println ("Berapa roti yang kamu punya?");
+       intro();                     
+        summon.roticount();
       
-       
+    
         banyakroti = input.nextInt();
         
-       System.out.println ("Berapa keju yang kamu punya?");
+       summon.kejucount();
        banyakkeju = input.nextInt();
        
       if (banyakroti<rotimin || banyakkeju<kejumin )
       {
       
-      System.out.println ("Maaf, bahan-bahan kamu tidak cukup untuk membuat roti lapis double" );
+      summon.sorry();
       }
       
       else {int rotivalue; 
@@ -56,19 +56,14 @@ public class RotiLapisKeju {
            System.out.println ("Kamu bisa membuat "+ terkecil +" roti lapis double");
                    
            sisaroti = banyakroti - terkecil*rotimin;
-           sisakeju = banyakkeju - terkecil*kejumin ;
+           sisakeju = banyakkeju - terkecil*kejumin;
           
            if (sisaroti>0 && sisakeju>0) {System.out.println ("Kamu menyisakan "+sisaroti+" roti, dan "+sisakeju+" keju");}
-           
-           
+                      
            else if (sisaroti < 1 && sisakeju>0) {System.out.println ("Kamu hanya menyisakan "+sisakeju+" keju. Tidak ada sisa roti");}
-           
-           
-           
+                                 
            else if (sisakeju < 1 && sisaroti>0){System.out.println("Kamu menyisakan "+sisaroti+" roti, kejumu habis.");}
-           
-           
-           
+                                 
            else {System.out.println("Kamu tidak menyisakan roti ataupun keju.");
                   
       }
