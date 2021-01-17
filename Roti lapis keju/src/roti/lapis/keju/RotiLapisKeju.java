@@ -79,7 +79,7 @@ public class RotiLapisKeju {
       ans = bleh.nextLine();  
           if (ans.equalsIgnoreCase("tidak"))
           {A=false;
-          System.out.println ("\nTerima kasih telah menggunakan program kami\nDEVELOPED BY:\nHilmi Ahmad/21120119130048\nYohannes Kukuh N/21120119130095\n\nProgram Berakhir..." );
+          System.out.println ("\nTerima kasih telah menggunakan program kami\nDEVELOPED BY:\nHilmi Ahmad/211********\nYohannes Kukuh N/211********\n\nProgram Berakhir..." );
           }
       
         }   
